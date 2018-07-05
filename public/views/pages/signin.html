@@ -1,37 +1,54 @@
-<div class="page page-signin" layout-gt-xs="row" layout-align="center center">
-    <md-card flex-gt-sm="35" flex-sm="50" layout-padding layout-margin>
-        <md-card-header>
-            <md-card-header-text>
-                <span class="md-headline text-uppercase text-bolder">Degree</span>
-                <span class="md-subhead">Sign in to Dashboard</span>
-            </md-card-header-text>
-        </md-card-header>
+<div class="page page-signin" layout-gt-xs="row" style="padding:0">
+  <div style="width: 300px;
+    background-image:url('/images/bg-v4.png');background-size:cover;">
+  <p style="font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 15px;
+    margin: 40px;
+    color: #fff;">
+    babel
+  </p>
+  <img src="/images/unificationfoundation_logo.png" />
+  </div>
+    <md-card class="col-sm-4 col-sm-offset-3" style="padding:0;    margin-top: 130px;
+    height: 500px;
+    max-height: 500px;">
+      <p class="panel panel-default panel-body text-center" style="background:#f8fafc">
+        <span class="text-primary text-uppercase text-bolder" style="color:#363569">WElcome Back! please Login!</span>
+      </p>
 
 
         <md-card-content>
             <form name="loginForm">
-                <md-input-container class="md-block">
+                <!-- <md-input-container class="md-block">
                     <label>Email Address</label>
                     <input type="email" ng-model="login.email" name="email" placeholder="example@xyz.com" required ng-pattern="/^.+@.+\..+$/"/>
+                </md-input-container> -->
+                <div class="margin-50-login">
+                  <div class="form-group mb-30">
+                     <label for="exampleInputEmail1">Sign in with your e-mail adress</label>
+                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                   </div>
+                   <div class="form-group mb-30">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <button class="btn btn-default btn-block text-uppercase">Sign in <i class="fa fa-long-arrow-right" style="float: right;"></i></button>
+                </div>
 
-                </md-input-container>
-
-                <md-input-container class="md-block">
+                <!-- <md-input-container class="md-block">
                     <label>Password</label>
                     <input type="password"  ng-model="login.pass" name="password" placeholder="........" required ng-minlength="8" style="margin-bottom: 2px"/>
                     <div class="md-caption" style="text-align: right;"><a href="#/pages/forget-pass">Forget Password?</a></div>
-                </md-input-container>
-                <div layout layout-align="end center">
-                    <md-button class="md-raised md-primary" flex href="#/dashboard">Sign In</md-button>
-                </div>
-
-
+                </md-input-container> -->
+<p>
+  <span class="col-sm-6 pull-left text-underline">Don't have an account yet? Get Started</span>
+    <span class="col-sm-3 pull-right text-underline">Forget password</span>
+</p>
             </form>
         </md-card-content>
 
-        <md-footer class="text-center">
-            <div class="md-caption">Don't have an account?&nbsp;<a href="#/pages/register">Create One</a></div>
-        </md-footer>
 
     </md-card>
 

@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Roboto', 'Helvetica Neue', sans-serif;
-    letter-spacing:1.1px;
+    letter-spacing:1px;
     color: $md-font-primary;
     font-size: 14px!important;
     line-height: 1.5!important;
@@ -9,7 +9,7 @@ body {
 }
 
 .app.body-full {
-    background: $md-blue-grey-700;
+    background: $md-blue-grey-50;
     .md-sidenav-left {display: none!important;}
     .content-wrapper .site-head {display: none!important;}
     .main-content {
