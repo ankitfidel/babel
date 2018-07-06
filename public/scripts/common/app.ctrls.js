@@ -30,8 +30,8 @@
         $scope.lineconfig = {
     			data: {
     				columns: [
-    					['data1', 30, 200, 100, 200, 150, 250],
-    					['data2', 50, 20, 10, 40, 15, 25]
+    					['Data sent', 30, 200, 150, 250,200, 150, 250,200, 150, 250],
+    					['UND', 50, 20, 10,30, 200, 100, 200,  40, 15, 25]
     				]
     			},
           type:'area-spline',
@@ -39,13 +39,13 @@
       			pattern: ["#F5086B",  "#42d2af"]
       		},
           legend: {
-      			position: "top"
+      			position: "right"
       		},
           zoom: {
   enabled: true
 },
 point: {
-  r: 2
+  r: 4
 }
     		};
         $scope.weeklygrowthconfig = {

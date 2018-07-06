@@ -1,11 +1,15 @@
 .pb-30{padding-bottom: 30px}
 .mt-20{margin-top: 20px}
+
+.mt-50{margin-top: 50px}
+.ml-20{margin-left: 20px}
+.mb-20{margin-bottom: 20px}
 .text-grey-color{color: #A9B0B7}
 .md-headline{color: #909CA8; font-weight: 900}
 .text-center{text-align: center;}
 .button-transparent{background: transparent;
   border: 0 none;}
-.margin-50-login{margin: 50px 15px 30px;}
+.margin-50-login{}
 .mb-30{margin-bottom: 30px}
 .text-underline{text-decoration: underline;}
 .btn-light{background: #fff; color:#808080; border: 1px none !important}

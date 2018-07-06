@@ -2,19 +2,33 @@
 
   <div layout="row" layout-wrap>
     <div flex="100" flex-md="50" flex-gt-md="70">
-      [flex="30"]
+      <div class="mt-20 mb-20 ml-20">
+        <img src="/images/BABEL.png">
+      </div>
       <div class="row">
-        <div class="col-sm-6">
-
-<h4 class=" text-grey-color">Wallet Balance</h4>
+        <div class="col-sm-4 mt-50">
+          <div class="ml-20">
+            <h4 class="text-bolder text-grey-color">Wallet Balance</h4>
+            <div class="mt-20">
+              <span class="text-grey-color">UND</span>&nbsp;<span class="h3 text-primary">99.67</span>
+            </div>
+            <div class="mb-20">
+              <span class="text-grey-color">USD</span>&nbsp;&nbsp;<span class="h5 text-primary">125.67</span>
+            </div>
+            <button class="btn btn-default btn-sm">Deposit UND <i class="fa fa-long-arrow-up"></i></button>
+            <button class="btn btn-primary btn-sm">Withdraw UND <i class="fa fa-long-arrow-up"></i></button>
+          </div>
         </div>
-        <div class="col-sm-6">
-          <h4 class="text-grey-color">Data flow And earnings</h4>
+        <div class="col-sm-8">
+          <h4 class="text-bolder text-grey-color">Data flow And earnings</h4>
 <div>
-    <c3-chart id="c3chartline" config="lineconfig"></c3-chart>
+    <c3-chart id="c3chartline" style="height:300px" config="lineconfig"></c3-chart>
 </div>
 
         </div>
+      </div>
+      <div>
+        <h4 class="text-bolder text-grey-color">Data Sharing</h4>
       </div>
     </div>
     <div flex="100" flex-md="50" flex-gt-md="30">
