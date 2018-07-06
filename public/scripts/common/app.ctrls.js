@@ -27,6 +27,27 @@
 
     .controller('DashboardCtrl', ['$scope', function($scope) {
         // === weekly growth
+        $scope.lineconfig = {
+    			data: {
+    				columns: [
+    					['data1', 30, 200, 100, 200, 150, 250],
+    					['data2', 50, 20, 10, 40, 15, 25]
+    				]
+    			},
+          type:'area-spline',
+          color: {
+      			pattern: ["#F5086B",  "#42d2af"]
+      		},
+          legend: {
+      			position: "top"
+      		},
+          zoom: {
+  enabled: true
+},
+point: {
+  r: 2
+}
+    		};
         $scope.weeklygrowthconfig = {
             data: {
     			columns: [

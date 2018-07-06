@@ -1,6 +1,88 @@
 <div class="page page-dashboard" layout-gt-sm="column" ng-controller="DashboardCtrl">
 
-    <div flex class="today-stats">
+  <div layout="row" layout-wrap>
+    <div flex="100" flex-md="50" flex-gt-md="70">
+      [flex="30"]
+      <div class="row">
+        <div class="col-sm-6">
+
+<h4 class=" text-grey-color">Wallet Balance</h4>
+        </div>
+        <div class="col-sm-6">
+          <h4 class="text-grey-color">Data flow And earnings</h4>
+<div>
+    <c3-chart id="c3chartline" config="lineconfig"></c3-chart>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div flex="100" flex-md="50" flex-gt-md="30">
+      <md-card style="">
+       <img ng-src="/images/face-profile.png" class="md-card-image" alt="Washed Out">
+       <div style="position:relative">
+         <div class="profiletxt">
+          <h3> Neyma Jahan</h3>
+          <h4> Chaing mai, Thailand</h4>
+         </div>
+       </div>
+
+       <md-card-title>
+         <md-card-title-text>
+           <span class="md-headline">Personal identity</span>
+         </md-card-title-text>
+       </md-card-title>
+       <md-card-content>
+<!--
+         <p>
+           The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+           two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+         </p> -->
+         <div class="row">
+          <div class="col-lg-4 col-sm-12">
+            <h5 class="text-uppercase text-grey-color">Birthday</h5>
+            <h4 class="text-primary">20.04.1985</h4>
+          </div>
+          <div class="col-lg-4 col-sm-12">
+              <h5 class="text-uppercase text-grey-color">Height</h5>
+              <h4 class="text-primary">186 cm</h4>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+            <h5 class="text-uppercase text-grey-color">Weight</h5>
+            <h4 class="text-primary">86kg</h4>
+          </div>
+        </div>
+        <div class="row">
+         <div class="col-lg-6 col-sm-12">
+           <h5 class="text-uppercase text-grey-color">Marital status</h5>
+           <h4 class="text-primary">N/A</h4>
+         </div>
+         <div class="col-lg-6 col-sm-12">
+             <h5 class="text-uppercase text-grey-color">Gender</h5>
+             <h4 class="text-primary">Male</h4>
+           </div>
+
+       </div>
+       <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <h5 class="text-uppercase text-grey-color">Occupation</h5>
+          <h4 class="text-primary">CEO</h4>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <h5 class="text-uppercase text-grey-color">Income</h5>
+            <h4 class="text-primary">yes</h4>
+          </div>
+
+      </div>
+       </md-card-content>
+       <md-card-actions layout="row" layout-align="start center">
+        <button class="btn btn-primary btn-lg"> View All Data &nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></button>
+       </md-card-actions>
+     </md-card>
+    </div>
+
+  </div>
+    <!-- <div flex class="today-stats">
         <h3 class="md-caption" layout-margin>Today's Stats</h3>
 
         <div layout-gt-sm="row">
@@ -35,7 +117,7 @@
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-subhead text-uppercase text-bold">Browser Sessions</span>
-                    <!-- <md-divider></md-divider> -->
+
                 </md-card-title-text>
             </md-card-title>
 
@@ -48,7 +130,7 @@
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-subhead text-uppercase text-bold">Weekly Growth</span>
-                    <!-- <md-divider></md-divider> -->
+
                 </md-card-title-text>
             </md-card-title>
 
@@ -79,7 +161,7 @@
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-subhead text-uppercase text-bold">Activities</span>
-                    <!-- <md-divider></md-divider> -->
+
                 </md-card-title-text>
             </md-card-title>
 
@@ -123,7 +205,7 @@
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-subhead text-uppercase text-bold">Project Stats</span>
-                    <!-- <md-divider></md-divider> -->
+
                 </md-card-title-text>
             </md-card-title>
 
@@ -183,7 +265,7 @@
 
         </md-card>
 
-    </div>
+    </div> -->
 
 
 

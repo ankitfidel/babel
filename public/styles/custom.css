@@ -1,5 +1,7 @@
 .pb-30{padding-bottom: 30px}
 .mt-20{margin-top: 20px}
+.text-grey-color{color: #A9B0B7}
+.md-headline{color: #909CA8; font-weight: 900}
 .text-center{text-align: center;}
 .button-transparent{background: transparent;
   border: 0 none;}
@@ -24,6 +26,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdd4e3', end
     text-align: center;
     left: 0;
     right: 0;}
+    .profiletxt{position: absolute;
+      margin-top: -90px;
+    margin-left: 20px;
+    text-transform: uppercase; color: #fff}
 .hiddenformobile-bottomtxt{    position: absolute;
     margin: 0 auto;
     bottom: 0;

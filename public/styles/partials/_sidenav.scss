@@ -2,7 +2,14 @@
 .md-sidenav-left {
     min-width: $sitenav-width;
     width: $sitenav-width;
-    background: $md-blue-grey-900;
+    background: rgba(53,45,105,1);
+background: -moz-linear-gradient(top, rgba(53,45,105,1) 0%, rgba(52,45,250,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(53,45,105,1)), color-stop(100%, rgba(52,45,250,1)));
+background: -webkit-linear-gradient(top, rgba(53,45,105,1) 0%, rgba(52,45,250,1) 100%);
+background: -o-linear-gradient(top, rgba(53,45,105,1) 0%, rgba(52,45,250,1) 100%);
+background: -ms-linear-gradient(top, rgba(53,45,105,1) 0%, rgba(52,45,250,1) 100%);
+background: linear-gradient(to bottom, rgba(53,45,105,1) 0%, rgba(52,45,250,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#352d69', endColorstr='#342dfa', GradientType=0 );
     overflow: hidden;
 
 
@@ -54,11 +61,10 @@
 
 
 .md-sidenav-left .site-nav {
-    $offset : 124px;
-    // for scrollbar to hide, but scrolling through mousewheel or touchpad.
-    position: absolute;
-    top: $offset; bottom: 0; left: 0; right: -15px;
-    overflow-y: scroll; height: calc(100% - #{$offset});
+    // $offset : 124px;
+    // position: absolute;
+    // top: $offset; bottom: 0; left: 0; right: -15px;
+    // overflow-y: scroll; height: calc(100% - #{$offset});
 
     > .md-caption {
         padding: .5rem 1rem;
@@ -71,7 +77,7 @@
         color: $md-grey-200;
         text-decoration: none;
         display: block;
-        padding: .6rem 1.4rem;
+        padding: 1.6rem 1.4rem;
         position: relative;
         font-size: 14px;
         white-space: nowrap;
@@ -79,7 +85,7 @@
         transition: .15s ease-in;
     }
     a:hover, li.open > a, li.active > a{
-        background: $md-blue-grey-800;
+        background: #f5f5f552;
         > md-icon.first {background: $md-blue-grey-900;}
     }
 
@@ -91,14 +97,14 @@
     }
     // for inner-drop anchors
     li.active .inner-drop > li.active a{
-        color: $md-grey-100;
+        color: $md-blue-grey-900;
         background: lighten($md-blue-grey-900, 2%);
         font-weight: 500;
     }
 
     a > md-icon.first {
         color: $md-grey-200;
-        background: $md-blue-grey-800;
+        background: $md-grey-50;
         border-radius: 50%;
         text-align: center;
         margin-top: -2px;

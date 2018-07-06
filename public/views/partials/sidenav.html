@@ -1,9 +1,6 @@
-<md-toolbar layout="column" class="md-tall" layout-align="none center">
-    <a href="/" class="brand-logo">
-        <sup class="ion-ios-radio-button-on icon md-caption" md-colors="::{color: 'orange-100'}" style="font-size: 10px"></sup>
-        Degree
-    </a>
-    <div class="profile">
+<!-- <md-toolbar layout="column" class="md-tall" layout-align="none center">
+
+    <!-- <div class="profile">
         <figure>
             <img src="images/admin.jpg" alt="admin">
             <span class="isonline"></span>
@@ -13,23 +10,39 @@
 			<small>Graphic Designer</small>
 		</div>
     </div>
-</md-toolbar>
+</md-toolbar> -->
 
 <nav class="site-nav" highlight-sidenav highlight-active>
-    <p class="md-caption" md-colors="::{color: 'grey-400'}">Main</p>
+  <a href="/" class="brand-logo">
+    <img src="/images/logo-dashboard.png" />
+  </a>
     <ul class="nav md-body-1">
         <li>
-            <a href="#/dashboard"  md-ink-ripple><md-icon class="ion-ios-cube first"></md-icon>Dashboard</a>
+            <a href="#/dashboard" class="text-center"  md-ink-ripple><img style="width:20px" src="/images/apps.png" /></a>
         </li>
         <li>
-            <a href="#/email/inbox" md-ink-ripple><md-icon class="ion-ios-mail first"></md-icon>Email</a>
+            <a href="#/email/inbox" class="text-center" md-ink-ripple><img style="width:20px" src="/images/store.png" /></a>
         </li>
         <li>
-            <a href="#/calendar" md-ink-ripple><md-icon class="ion-md-calendar first"></md-icon>Calendar</a>
+            <a href="#/calendar" class="text-center" md-ink-ripple><img style="width:20px" src="/images/db.png" /></a>
         </li>
+        <li>
+            <a href="#/calendar" class="text-center" md-ink-ripple><img  style="width:20px"src="/images/notification.png" /></a>
+        </li>
+        <div style="position:absolute; bottom:0; left:0; right:0" >
+          <li>
+              <a href="#/calendar" class="text-center" md-ink-ripple><img  style="width:20px"src="/images/collaboration.png" /></a>
+          </li>
+          <li>
+              <a href="#/calendar" class="text-center" md-ink-ripple><img  style="width:20px"src="/images/profile.png" /></a>
+          </li>
+          <li>
+              <a href="#/calendar" class="text-center" md-ink-ripple><img  style="width:20px"src="/images/logout.png" /></a>
+          </li>
+        </div>
     </ul>
 
-    <p class="md-caption" md-colors="::{color: 'grey-400'}">Components</p>
+    <!-- <p class="md-caption" md-colors="::{color: 'grey-400'}">Components</p>
     <ul class="nav md-body-1">
         <li>
             <a href="#/ui" md-ink-ripple>
@@ -94,5 +107,5 @@
                 <li><a href="#/pages/invoice" md-ink-ripple>Invoice</a></li>
 			</ul>
         </li>
-    </ul>
+    </ul> -->
 </nav>
