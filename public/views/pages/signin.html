@@ -1,4 +1,4 @@
-<div class="page page-signin bg-login" layout-gt-xs="row" style="padding:0" ng-controller="signinController">
+<div class="page page-signin bg-login" layout-gt-xs="row" style="padding:0"  ng-init="advstatus=false" ng-controller="signinController">
   <div class="col-lg-3 bg-loginimg" class="">
   <p class="logo-custom" style="">
     babel
@@ -8,10 +8,10 @@
   </div>
   <div class="clearfix login-form" style="">
     <div class="row margin-50-login">
-      <div class="col-lg-12">
-        <button class="btn btn-light col-lg-5" ng-click="advstatus=false" ng-class="{'bg-primary active': advstatus === false}"
+      <div class="col-lg-12" style="margin-top: 30%;">
+        <button class="btn btn-light col-lg-5 text-uppercase" ng-click="advstatus=false" ng-class="{'bg-primary active': advstatus === false}"
    style="transform: skewx(-20deg);"><span style="transform: skewx(20deg);display: block;">Signin </span></button>
-         <button class="btn btn-light col-lg-5 pull-right" ng-click="advstatus=true" ng-class="{'bg-primary active': advstatus == true}" style="transform: skewx(-20deg);"><span style="transform: skewx(20deg);display: block;">Signup</span></button>
+         <button class="btn btn-light col-lg-5 pull-right text-uppercase" ng-click="advstatus=true" ng-class="{'bg-primary active': advstatus == true}" style="transform: skewx(-20deg);"><span style="transform: skewx(20deg);display: block;">Signup</span></button>
       </div>
 
     </div>
