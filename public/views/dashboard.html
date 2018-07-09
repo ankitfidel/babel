@@ -1,3 +1,5 @@
+
+
 <div class="page page-dashboard" layout-gt-sm="column" ng-controller="DashboardCtrl">
 
   <div layout="row" layout-wrap>
@@ -133,6 +135,93 @@
                <img src="/images/HSBC.png" style="width: 80px;" />
              </uib-tab-heading>
              I've got an  Pretty cool!
+
+             <div class="panel panel-body">
+               <div class="row mb-20">
+                 <div class="col-lg-3">
+                   <h4 class="text-primary text-bolder text-uppercase">Outgoing data</h4>
+                   <p class="text-grey-color text-uppercase">CAR INSURANCE SAVING</p>
+                   <div class="">
+                     <img class="mt-20 mr-50" src="/images/Vector-right.png" />
+                     <img class="mt-20 ml-20" src="/images/arrow-right.png" />
+                   </div>
+                 </div>
+                 <div class="col-lg-3">
+                   <h4 class="text-primary text-bolder text-uppercase">Custom report</h4>
+                   <p class="text-grey-color text-uppercase">CAR INSURANCE SAVING</p>
+                   <img class="mt-20 mr-20" src="/images/Design-car.png" />
+                 </div>
+                 <div class="col-lg-3">
+                   <h4 class="text-primary text-bolder text-uppercase">Campaign intent</h4>
+                   <p class="text-grey-color text-uppercase">OPTIMISATION OF INSURANCE COSTS</p>
+                 </div>
+                 <div class="col-lg-3">
+                   <h4 class="text-primary text-bolder text-uppercase">Reqired data permission</h4>
+                   <p class="text-grey-color text-uppercase">
+                      <md-switch  aria-label="Switch 1" class="md-primary md-block">Financial Account <br />balance</md-switch>
+                       <md-switch  aria-label="Switch 2" class="md-primary md-block">Time annd Date</md-switch>
+                        <md-switch  aria-label="Switch 3" class="md-primary md-block">Personal Identity</md-switch>
+                    </p>
+                 </div>
+               </div>
+
+               <div class="row mb-20">
+                 <div class="col-lg-3">
+                   <h4 class="text-primary  text-bolder text-uppercase">Data Category</h4>
+                   <p class="text-grey-color text-uppercase"> Finanace &<br /> Insurance</p>
+                 </div>
+                 <div class="col-lg-3">
+                   <h4 class="text-primary text-bolder text-uppercase">Compensation</h4>
+                   <p class="text-grey-color text-uppercase"> 1 UND per 1 <br />Data Transfer</p>
+                 </div>
+                 <div class="col-lg-3">
+                   <h4 class="text-primary text-bolder text-uppercase">Sharing Frequency</h4>
+                   <p class="text-grey-color text-uppercase"> Transfer &nbsp; <span class="h2">1</span> &nbsp;Transaction/day</p>
+                 </div>
+
+               </div>
+               <div class="row mb-20">
+                 <div class="col-lg-3">
+                   <h4 class="text-primary  text-bolder text-uppercase">ASSOCIATED Uapps</h4>
+                   <div>
+                     <div class="text-center mr-10" style="float:left;">
+                       <i class="fa  text-success fa-check-circle"></i><br />
+                       <img class="" src="/images/image-leaf.png" />
+                     </div>
+                     <div class="mr-10 text-center" style="float:left">
+                       <i class="fa text-success  fa-check-circle"></i><br />
+                       <img class="" src="/images/Zilloow.png" />
+                     </div>
+
+
+                   </div>
+                 </div>
+                 <div class="col-lg-3">
+                   <h4 class="text-primary text-bolder text-uppercase">Available UAPPS</h4>
+                   <div>
+                     <div class="text-center mr-10" style="float:left;">
+                       <i class="fa text-success fa-plus-circle"></i><br />
+                     <img class="" src="/images/fb-image.png" />
+                     </div>
+                     <div class="mr-10 text-center" style="float:left;" >
+                       <i class="fa text-success  fa-plus-circle"></i><br />
+                       <img class="" src="/images/citi.png" />
+                     </div>
+                     <div class="mr-10 text-center" style="float:left;" >
+                       <i style="visibility:hidden" class="fa text-success  fa-plus-circle"></i><br />
+                       <img class="" src="/images/app-plus.png" />
+                     </div>
+
+
+                   </div>
+                 </div>
+               </div>
+               <div>
+                 <button class="btn btn-primary btn-lg">Add Uapps &nbsp;<i class="fa fa-long-arrow-right"></i></button>&nbsp;
+                 <button class="btn btn-default btn-lg">Term and Conditions&nbsp; <i class="fa fa-long-arrow-right"></i></button>&nbsp;
+                 <button class="btn btn-default btn-lg">Active programs &nbsp;<i class="fa fa-long-arrow-right"></i></button>
+               </div>
+             </div>
            </uib-tab>
            <uib-tab index="10">
               <uib-tab-heading>
@@ -213,9 +302,38 @@
       <md-card-title>
         <md-card-title-text>
           <span class="md-headline">Activity Log</span>
+
+
         </md-card-title-text>
       </md-card-title>
       <md-card-content>
+        <div class="timeline">
+  <div class=" right">
+    <div class="content">
+      <p><b>Neyma Jahan</b> has activated Strava Uapp.</p>
+      
+    </div>
+  </div>
+  <div class=" right">
+    <div class="content">
+      <p><b>Neyma Jahan</b> has activated 23 & me Uapp.</p>
+
+    </div>
+  </div>
+  <div class=" right">
+    <div class="content">
+        <p><b>Neyma Jahan</b> has subscribed to Blood Gluclose Monitoring program.</p>
+
+    </div>
+  </div>
+  <div class=" right">
+    <div class="content">
+      <p><b>Neyma Jahan</b> has activated One Drop Uapp.</p>
+
+    </div>
+  </div>
+
+</div>
         <!-- <timeline>
            <timeline-event ng-repeat="event in events" side="right">
              <timeline-badge class="{{event.badgeClass}}">
