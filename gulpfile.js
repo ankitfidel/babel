@@ -11,6 +11,7 @@ const gulp            = require('gulp'),
 // Fixed Issue: https://github.com/floatdrop/gulp-watch/issues/1
 const paths = {
     jsLibs: [
+
         'jquery.min.js',
         'angular.min.js',
         'angular-aria.min.js',
@@ -20,7 +21,9 @@ const paths = {
         'angular-messages.min.js',
         'angular-material.min.js',
         'md-data-table.min.js',
-        'ocLazyLoad.min.js'
+        'ocLazyLoad.min.js',
+        'ui-bootstrap-tpls.js',
+        'angular-timeline.js'
     ],
     scripts: ['app.js', 'common/*.js', 'ui/*.js', 'forms/*.js', 'tables/*.js'],
     sass: ['public/styles/**/*.scss'],
@@ -36,8 +39,8 @@ gulp.task('serve', ['sass', 'js-concat:main', 'js-concat:libs'], function() {
     browserSync.init({
         server: './public',
         notify: false,
-        port: 2400,
-        ui: {port: 2401},
+        port: 3000,
+        ui: {port: 3001},
         open: false
     });
 

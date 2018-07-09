@@ -1,0 +1,426 @@
+<div class="page page-dashboard" layout-gt-sm="column" ng-controller="DashboardCtrl1">
+
+  <div layout="row" style="margin-bottom: 120px;">
+    <div flex="100" flex-md="50" flex-gt-md="50">
+      <div class="mt-20 mb-20 ml-20">
+        <img src="/images/BABEL.png">
+      </div>
+      <div>
+        <h4 class="text-primary mt-30 mb-20 ml-20">One Drop Diabetes Management </h4>
+        <div class="col-sm-2">
+          <img src="/images/onedrop-app.png" /><br />
+          <p class="text-primary text-bolder mt-20">
+            User ratings
+          </p>
+          <fieldset class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+        </fieldset>
+        </div>
+        <div class="col-sm-10">
+        <p>
+          One Drop Mobile is a free award-winning app loaded with features to help users manage their diabetes data. Uapp includes the features like: Apple Health® Integration, Fully-Featured Apple WatchOS 3 App,
+          Scheduled Medication Reminders, Automatic Insulin Pump Data, Automatic Carb Counting, Historical Data & Stats Views, Multi-Language & Multi-Region Support and Great Community. Uapp integrates with many currently available programs
+        </p>
+        </div>
+      </div>
+    </div>
+    <div flex="100" flex-md="50" flex-gt-md="50">
+<div>
+<h3 class="text-grey-color text-bolder">UND Earnings</h3>
+  <div class="col-lg-4" style="border-right:1px solid #ccc">
+    <h2 class="text-primary">+19.25 (8.50%)</h2>
+    <span class="text-grey-color">Change in Earnings</span>
+  </div>
+  <div class="col-lg-4 ml-20">
+    <h3 class="text-grey-color text-bolder"></h3>
+    <h2 class="text-primary">225.67 UND</h2>
+    <span class="text-grey-color">Previous month</span>
+  </div>
+</div>
+<div>
+    <c3-chart id="c3chartbar" style="height:250px" config="barconfig"></c3-chart>
+</div>
+    </div>
+
+  </div>
+  <div layout="row" layout-fill layout-align="center stretch">
+    <div class="col-lg-3">
+      <h4 class="text-bolder text-grey-color">Data Available</h4>
+      <table class="table table-striped">
+        <thead>
+          <th class="text-grey-color"> Data type</th>
+          <th class="text-grey-color"> UND Rate</th>
+        </thead>
+        <tbody>
+          <tr>
+
+            <td> <img src="/images/icons/blood.png" class="mr-20" />Blood Glucose</td>
+            <td> 2 UND</td>
+          </tr>
+          <tr>
+            <td> <img src="/images/icons/time.png" class="mr-20" />Time and date</td>
+            <td> 1 UND</td>
+          </tr>
+          <tr>
+            <td><img src="/images/icons/identity.png" class="mr-20" /> Personal Identity</td>
+            <td> 0.5 UND</td>
+          </tr>
+          <tr>
+            <td> <img src="/images/icons/location.png" class="mr-20" />Location</td>
+            <td> 3.3 UND</td>
+          </tr>
+          <tr>
+            <td> <img src="/images/icons/heart.png" class="mr-20" />Heart Rate</td>
+            <td> 1.4 UND</td>
+          </tr
+          <tr>
+            <td><img src="/images/icons/carbs.png" class="mr-20" /> Carbs  Count</td>
+            <td> 2.1 UND</td>
+          </tr>
+          <tr>
+            <td><img src="/images/icons/medicine.png" class="mr-20" /> Medicine data</td>
+            <td> 1.8 UND</td>
+          </tr>
+          <tr>
+            <td><img src="/images/icons/insulin.png" class="mr-20" /> Insulin Basal Rates</td>
+            <td> 1 UND</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-3" layout="column" layout-align="center center">
+      <h4 class="text-bolder text-grey-color">Data Consumer</h4>
+      <div>
+        <md-card class="mb-20">
+          <div class="text-center mt-20 mb-20">
+            <img src="/images/icons/stanfold.png" />
+          </div>
+         <md-card-title>
+           <md-card-title-text>
+             <span class="text-primary h4">Glucose Monitoring</span>
+           </md-card-title-text>
+         </md-card-title>
+         <md-card-content>
+            <p class="mb-20"> Program aimed to study the level of glucose of population during the summer vacation days.</p>
+          <div class="text-center">
+             <button class="btn btn-primary btn-lg" ng-click="seeDetails()">See program</button>
+          </div>
+         </md-card-content>
+       </md-card>
+       <md-card class="mb-20">
+         <div class="text-center mt-20 mb-20">
+           <img src="/images/icons/hsbc.png" />
+         </div>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="text-primary h4">Health Big Data</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+           <p class="mb-20">Health Data Collection Program from DeepMind collects health Big Data from users across the globe </p>
+           <div class="text-center">
+              <button class="btn btn-primary btn-lg" ng-click="seeDetails()">See program</button>
+           </div>
+        </md-card-content>
+      </md-card>
+      </div>
+
+    </div>
+    <div class="col-lg-3" layout="column" layout-align="center center">
+      <h4 class="text-bolder text-grey-color" style="visibility:hidden">Data Consumer</h4>
+      <div>
+        <md-card class="mb-20">
+          <div class="text-center mt-20 mb-20">
+            <img src="/images/icons/deepmind.png" />
+          </div>
+         <md-card-title>
+           <md-card-title-text>
+             <span class="text-primary h4">Insurance Financing</span>
+           </md-card-title-text>
+         </md-card-title>
+         <md-card-content>
+            <p class="mb-20"> HSBC tries to provide better financing support for medical research programs fighting diabetes</p>
+            <div class="text-center">
+               <button class="btn btn-primary btn-lg">See program</button>
+            </div>
+         </md-card-content>
+       </md-card>
+       <md-card class="mb-20">
+         <div class="text-center mt-20 mb-20">
+           <img src="/images/icons/kaiser.png" />
+         </div>
+        <md-card-title>
+          <md-card-title-text>
+
+            <span class="text-primary">Health and Wellness Data</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+           <p class="mb-20">Collecting Data for research and development of better healthcare Programs</p>
+           <div class="text-center">
+              <button class="btn btn-primary btn-lg">See program</button>
+           </div>
+        </md-card-content>
+      </md-card>
+      </div>
+
+    </div>
+    <div class="col-lg-3">
+       <md-content style="">
+      <md-tabs class="customdynamic" style="height:500px !important" md-border-bottom>
+     <md-tab label="New Users">
+       <md-content class="md-padding">
+         <table class="table table-striped">
+           <tbody>
+             <tr>
+               <td> <img src="/images/image.png" class="img-circle" /></td>
+               <td>
+                 <p>Will Mekemson</p>
+                 <span>Los Angeles</span>
+               </td>
+                <td> 1h ago</td>
+             </tr>
+             <tr>
+               <td> <img src="/images/image-2.png" class="img-circle" /></td>
+               <td>
+                 <p>Shawn McLean</p>
+                 <span>New York</span>
+               </td>
+                <td> 15h ago</td>
+             </tr>
+             <tr>
+               <td> <img src="/images/image3.png" class="img-circle" /></td>
+               <td>
+                 <p>Erica Blair</p>
+                 <span>Manila</span>
+               </td>
+                <td> 16h ago</td>
+             </tr>
+             <tr>
+               <td> <img src="/images/image4.png" class="img-circle" /></td>
+               <td>
+                 <p>John Justus</p>
+                 <span>Research</span>
+               </td>
+                <td> 20h ago</td>
+             </tr>
+             <tr>
+               <td> <img src="/images/image5.png" class="img-circle" /></td>
+               <td>
+                 <p> Meera Blair</p>
+                 <span>Operations</span>
+               </td>
+                <td> 22h ago</td>
+             </tr>
+
+           </tbody>
+         </table>
+       </md-content>
+     </md-tab>
+     <md-tab label="Potential users on UND">
+       <md-content class="md-padding">
+         <h1 class="md-display-2">Potential users on UND</h1>
+         <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+       </md-content>
+     </md-tab>
+   </md-tabs>
+ </md-content>
+    </div>
+  </div>
+    <!-- <div flex class="today-stats">
+        <h3 class="md-caption" layout-margin>Today's Stats</h3>
+
+        <div layout-gt-sm="row">
+            <div flex-gt-sm="33" class="stats-wrapper">
+                <div class="stats">
+                    <div class="val">3.1K</div>
+                    <div class="md-caption text-uppercase">Page Views</div>
+                </div>
+                <span class="chart-trends" sparkline type="line" width="8em" height="2em" fill-color="transparent" line-color="#388E3C">3,4,2,3,4,1,4,2</span>
+            </div>
+
+            <div flex-gt-sm="33" class="stats-wrapper">
+                <div class="stats">
+                    <div class="val">288</div>
+                    <div class="md-caption text-uppercase">Downloads</div>
+                </div>
+                <span class="chart-trends" sparkline type="line" width="8em" height="2em" fill-color="transparent" line-color="#388E3C">3,4,2,3,4,4,6,2</span>
+            </div>
+
+            <div flex-gt-sm="33" class="stats-wrapper">
+                <div class="stats">
+                    <div class="val">$189</div>
+                    <div class="md-caption text-uppercase">Earnings</div>
+                </div>
+                <span class="chart-trends" sparkline type="line" width="8em" height="2em" fill-color="transparent" line-color="#388E3C">3,4,2,3,4,5,4,5</span>
+            </div>
+        </div>
+    </div>
+
+    <div layout-gt-sm="row">
+        <md-card flex-gt-sm="40">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-subhead text-uppercase text-bold">Browser Sessions</span>
+
+                </md-card-title-text>
+            </md-card-title>
+
+            <md-card-content style="text-align: center;">
+            	<c3-chart id="c3chartbrowsershare" config="browserconfig"></c3-chart>
+            </md-card-content>
+        </md-card>
+
+        <md-card flex-gt-sm="60">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-subhead text-uppercase text-bold">Weekly Growth</span>
+
+                </md-card-title-text>
+            </md-card-title>
+
+            <md-card-content>
+                <c3-chart id="c3chartweeklygrowth" config="weeklygrowthconfig"></c3-chart>
+            </md-card-content>
+        </md-card>
+    </div>
+
+    <div layout-gt-sm="row">
+
+
+        <md-card flex-gt-sm="60">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-subhead text-uppercase text-bold">Visitors Age</span>
+                </md-card-title-text>
+            </md-card-title>
+
+            <md-card-content>
+                <c3-chart id="c3visitorsage" config="visitorsageconfig"></c3-chart>
+
+            </md-card-content>
+
+        </md-card>
+
+        <md-card flex-gt-sm="40">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-subhead text-uppercase text-bold">Activities</span>
+
+                </md-card-title-text>
+            </md-card-title>
+
+            <md-card-content class="dashboard-activities">
+                <ul class="list-unstyled">
+                    <li class="primary">
+                        <span class="point"></span>
+                        <span class="time md-caption">2 mins ago</span>
+                        <p>Jonathan attended a meeting.</p>
+                    </li>
+                    <li class="success">
+                        <span class="point"></span>
+                        <span class="time md-caption">1 hour ago</span>
+                        <p>Designed the wordpress theme</p>
+                    </li>
+                    <li class="warning">
+                        <span class="point"></span>
+                        <span class="time md-caption">4:30 p.m</span>
+                        <p>Lily created her account.</p>
+                    </li>
+                    <li class="info">
+                        <span class="point"></span>
+                        <span class="time md-caption">2 days ago</span>
+                        <p>Your domain will expired in 9 days.</p>
+                    </li>
+                    <li class="danger">
+                        <span class="point"></span>
+                        <span class="time md-caption">1 week ago</span>
+                        <p>Lorem ipsum dolar sit amet consectator.</p>
+                    </li>
+                </ul>
+
+            </md-card-content>
+
+        </md-card>
+
+    </div>
+
+    <div layout-gt-sm="row">
+        <md-card flex-gt-sm="100">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-subhead text-uppercase text-bold">Project Stats</span>
+
+                </md-card-title-text>
+            </md-card-title>
+
+            <md-card-content>
+                <md-table-container>
+                    <table md-table>
+                        <thead md-head>
+                            <tr md-row>
+                                <th md-column class="text-uppercase">Id</th>
+                                <th md-column class="text-uppercase">Project</th>
+                                <th md-column class="text-uppercase">Fees</th>
+                                <th md-column class="text-uppercase">Status</th>
+                                <th md-column class="text-uppercase">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody md-body>
+                            <tr md-row>
+                                <td md-cell>220</td>
+                                <td md-cell>Convert to Sass</td>
+                                <td md-cell>$340</td>
+                                <td md-cell><md-progress-circular md-mode="determinate" value="60" class="md-warn" md-diameter="25"></md-progress-circular></td>
+                                <td md-cell>10<sup>th</sup> Dec 2016</td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell>101</td>
+                                <td md-cell>Designing wordpress theme</td>
+                                <td md-cell>$1340</td>
+                                <td md-cell><md-progress-circular md-mode="determinate" class="md-accent" value="80"  md-diameter="25"></md-progress-circular></td>
+                                <td md-cell>20<sup>th</sup> Dec 2016</td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell>310</td>
+                                <td md-cell>Adding animations to template</td>
+                                <td md-cell>$120</td>
+                                <td md-cell><md-progress-circular md-mode="determinate" value="90" md-diameter="25"></md-progress-circular></td>
+                                <td md-cell>2<sup>nd</sup> Dec 2016</td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell>405</td>
+                                <td md-cell>Lorem ipsum dolar sit amet</td>
+                                <td md-cell>$310</td>
+                                <td md-cell><md-progress-circular md-mode="determinate" value="50" class="md-warn" md-diameter="25"></md-progress-circular></td>
+                                <td md-cell>29<sup>th</sup> Nov 2016</td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell>445</td>
+                                <td md-cell>Building admin template</td>
+                                <td md-cell>$890</td>
+                                <td md-cell><md-progress-circular md-mode="determinate" value="30" class="md-warn md-hue-2" md-diameter="30"></md-progress-circular></td>
+                                <td md-cell>1<sup>st</sup> Jan 2017</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </md-table-container>
+            </md-card-content>
+
+        </md-card>
+
+    </div> -->
+
+
+
+</div>

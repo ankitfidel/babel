@@ -10,6 +10,8 @@
         'ngMessages',
         'ngMaterial',
         'md.data.table',
+        'ui.bootstrap',
+        'angular-timeline',
         'oc.lazyLoad',
         // custom modules
         'app.ctrls',
@@ -84,7 +86,7 @@
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
         var routes = [
-            'dashboard', 'email/inbox', 'calendar',
+            'dashboard','dashboard-2', 'email/inbox', 'calendar',
             'ui/buttons', 'ui/typography', 'ui/cards', 'ui/grids', 'ui/icons', 'ui/tabs', 'ui/modals', 'ui/progress', 'ui/extras',
             'forms/elements', 'forms/validation', 'forms/uploader',
             'tables',
@@ -106,7 +108,7 @@
 		});
 
         $routeProvider
-            .when('/', {redirectTo: '/dashboard'})
+            .when('/', {redirectTo: '/dashboard-2'})
             .when('/404', {templateUrl: 'views/pages/404.html'})
             .otherwise({redirectTo: '/404'})
 
@@ -177,6 +179,33 @@
                 }]
             }
         })
+        $routeProvider.when('/dashboard-2', {
+            templateUrl: 'views/dashboard-2.html',
+            resolve: {
+                deps: ["$ocLazyLoad", '$rootScope', '$timeout', function(a, $rootScope, $timeout) {
+					return a.load(['scripts/lazyload/jquery.sparkline.min.js'])
+					.then(function() {
+						return a.load({
+							name: "app.directives",
+							files: ["scripts/lazyload/sparkline.directive.js"]
+						})
+					})
+                    .then(function() {
+                        return a.load(["scripts/lazyload/d3.min.js", "scripts/lazyload/c3.min.js", "styles/lazyload/c3.min.css"])
+                    })
+                    .then(function() {
+                        return a.load('angular-c3');
+                    })
+                    .then(function() {
+						$timeout(function() {
+							$rootScope.$broadcast("c3.resize");
+						}, 100);
+					})
+
+				}]
+            }
+        })
+
 
         // charts - c3
         $routeProvider.when('/charts/c3', {

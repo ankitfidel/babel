@@ -1,4 +1,4 @@
-<div class="page page-signin bg-login" layout-gt-xs="row" style="padding:0">
+<div class="page page-signin bg-login" layout-gt-xs="row" style="padding:0" ng-controller="signinController">
   <div class="col-lg-3 bg-loginimg" class="">
   <p class="logo-custom" style="">
     babel
@@ -32,7 +32,7 @@
                     <label for="exampleInputPassword1">Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                   </div>
-                  <button class="btn btn-default btn-block text-uppercase">Sign in <i class="fa fa-long-arrow-right" style="float: right;"></i></button>
+                  <button class="btn btn-default btn-block text-uppercase" ng-click="getUser()">Sign in <i class="fa fa-long-arrow-right" style="float: right;"></i></button>
               </div>
                 <p>
                   <span class="col-sm-6 pull-left text-underline">Don't have an account yet? Get Started</span>
