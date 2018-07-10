@@ -1,15 +1,19 @@
  .md-thumb{background-color: rgba(250, 250, 250, 0);
     border: 2px solid red;}
 md-switch .md-bar{background-color: rgba(158, 158, 158, 0);
+  height: 19px;
     border: 2px solid red;}
-md-switch .md-thumb{height: 14px;
-    width: 14px;margin: 3px}
-md-switch.md-checked.md-primary .md-thumb{background-color: rgba(158, 158, 158, 0);    border: 2px solid green;}
-md-switch.md-checked.md-primary .md-bar{background-color: rgba(158, 158, 158, 0);    border: 2px solid green;}
+md-switch .md-thumb{    height: 15px;
+    width: 15px;
+    margin: 5px 3px;}
+md-switch.md-checked.md-primary .md-thumb{background-color: rgba(158, 158, 158, 0);    border: 2px solid #37D2AF;}
+md-switch.md-checked.md-primary .md-bar{background-color: rgba(158, 158, 158, 0);    border: 2px solid #37D2AF;}
+.btn-inverse{background: #969696; color: #fff}
 .pb-30{padding-bottom: 30px}
 .mt-20{margin-top: 20px}
 .mt-50{margin-top: 50px}
 .ml-20{margin-left: 20px}
+.mb-0{margin-bottom: 0}
 .mb-20{margin-bottom: 20px}
 .text-grey-color{color: #A9B0B7}
 .md-headline{color: #909CA8; font-weight: 900}

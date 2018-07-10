@@ -1,0 +1,1057 @@
+<style>
+.tableforprofile.table-bordered td {border: none !important;}
+</style>
+<div class="page page-dashboard" layout-gt-sm="column" ng-controller="DashboardCtrl">
+
+  <div layout="row" layout-wrap>
+    <div flex="100" flex-md="50" flex-gt-md="70">
+      <div class="mt-20 mb-20 ml-20">
+        <img src="/images/BABEL.png">
+      </div>
+      <div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="clearfix">
+              <div class="panel panel-default mb-0">
+                <div class="panel-body clearfix">
+                  <div class="col-sm-2">
+                    <img ng-src="/images/fb-image.png" class="md-card-image" alt="Washed Out">
+                    <span style=" margin-left: 15px;">Facebook</span>
+                  </div>
+                  <div class="col-sm-6">
+                    <p>Acces to Location:public Profile(Reqired) Friend's List,Timeline Posts,Status Update</p>
+                  </div>
+                  <div>
+                    <div class="col-sm-3" ng-show="detailplus" >
+                      <button class="btn btn-success btn-sm">Verify</button><button style="background:#30A88C" class="btn btn-success btn-sm "> <i class="fa fa-check-circle"></i></button>
+                      <button class="btn btn-inverse text-white btn-sm">Delete</button><button style="background:#6D6D6D" class="btn btn-primary btn-sm" > <i class="fa fa-trash"></i></button>
+                    </div>
+                    <div class="col-sm-2" ng-hide="hideconnect">
+                      <button class="btn btn-primary btn-sm">Connect</button><button style="background:#433EA6" class="btn btn-primary btn-sm" ng-click="detailplus = true; hideconnect = true"> <i class="fa fa-plus"></i></button>
+                    </div>
+                    <i class="pull-right" ng-click="paneldetails = !paneldetails">More &nbsp; <span  ng-class="{'fa fa-chevron-down': paneldetails, 'fa fa-chevron-right': !paneldetails}"></span></i>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default" ng-show="paneldetails">
+                <md-table-container>
+                    <table md-table  class="table tableforprofile table-bordered" >
+                        <tbody md-body>
+                            <tr md-row style="border:none">
+                                <td md-cell class="col-sm-3  " >Website</td>
+                                <td md-cell class="col-sm-9  ">https://www.facebook.com/</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3 ">URL Access Given To</td>
+                                <td md-cell class="col-sm-9  ">facebook.com</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3">The App has Access To</td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/userprofile.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Public profile</span><br />Neyma jahan,profile picure 42+years old, male and otherpublic info </span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/friendlist.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                      <span class=""><span class="text-bolder text-uppercase">Friends List</span><br />Gregory Frost,Anna Taylor  and 330others.</span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/timeline.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Timeline Posts</span><br />Your public and private posts including photos and videos and infoabout places</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/icons/location.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Locations</span><br />Updates regarding locations and check-ins</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </md-table-container>
+
+              </div>
+            </div>
+            <div class="clearfix">
+              <div class="panel panel-default mb-0">
+                <div class="panel-body clearfix">
+                  <div class="col-sm-2">
+                    <img ng-src="/images/strava.png" class="md-card-image" alt="Washed Out" style="width:60px">
+                    <span style=" margin-left: 15px;">Strava</span>
+                  </div>
+                  <div class="col-sm-6">
+                    <p>Acces to Location:public Profile(Reqired) Friend's List,Timeline Posts,Status Update</p>
+                  </div>
+                  <div>
+                    <div class="col-sm-3" ng-show="detailplus1" >
+                      <button class="btn btn-success btn-sm">Verify</button><button style="background:#30A88C" class="btn btn-success btn-sm "> <i class="fa fa-check-circle"></i></button>
+                      <button class="btn btn-inverse text-white btn-sm">Delete</button><button style="background:#6D6D6D" class="btn btn-primary btn-sm" > <i class="fa fa-trash"></i></button>
+                    </div>
+                    <div class="col-sm-2" ng-hide="hideconnect1">
+                      <button class="btn btn-primary btn-sm">Connect</button><button style="background:#433EA6" class="btn btn-primary btn-sm" ng-click="detailplus1 = true; hideconnect1 = true"> <i class="fa fa-plus"></i></button>
+                    </div>
+                    <i class="pull-right" ng-click="paneldetails121 = !paneldetails121">More &nbsp; <span  ng-class="{'fa fa-chevron-down': paneldetails121, 'fa fa-chevron-right': !paneldetails121}"></span></i>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default" ng-show="paneldetails121">
+                <md-table-container>
+                    <table md-table  class="table tableforprofile table-bordered" >
+                        <tbody md-body>
+                            <tr md-row style="border:none">
+                                <td md-cell class="col-sm-3  " >Website</td>
+                                <td md-cell class="col-sm-9  ">https://www.facebook.com/</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3 ">URL Access Given To</td>
+                                <td md-cell class="col-sm-9  ">facebook.com</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3">The App has Access To</td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/userprofile.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Public profile</span><br />Neyma jahan,profile picure 42+years old, male and otherpublic info </span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/friendlist.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                      <span class=""><span class="text-bolder text-uppercase">Friends List</span><br />Gregory Frost,Anna Taylor  and 330others.</span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/timeline.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Timeline Posts</span><br />Your public and private posts including photos and videos and infoabout places</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/icons/location.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Locations</span><br />Updates regarding locations and check-ins</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </md-table-container>
+
+              </div>
+            </div>
+
+            <div class="clearfix">
+              <div class="panel panel-default mb-0">
+                <div class="panel-body clearfix">
+                  <div class="col-sm-2">
+                    <img ng-src="/images/23&me.png" class="md-card-image" alt="Washed Out" style="width:60px">
+                    <span style=" margin-left: 15px;"> 23&amp;me </span>
+                  </div>
+                  <div class="col-sm-6">
+                    <p>Acces to Location:public Profile(Reqired) Friend's List,Timeline Posts,Status Update</p>
+                  </div>
+                  <div>
+                    <div class="col-sm-3" ng-show="detailplus2" >
+                      <button class="btn btn-success btn-sm">Verify</button><button style="background:#30A88C" class="btn btn-success btn-sm "> <i class="fa fa-check-circle"></i></button>
+                      <button class="btn btn-inverse text-white btn-sm">Delete</button><button style="background:#6D6D6D" class="btn btn-primary btn-sm" > <i class="fa fa-trash"></i></button>
+                    </div>
+                    <div class="col-sm-2" ng-hide="hideconnect2">
+                      <button class="btn btn-primary btn-sm">Connect</button><button style="background:#433EA6" class="btn btn-primary btn-sm" ng-click="detailplus2 = true; hideconnect2 = true"> <i class="fa fa-plus"></i></button>
+                    </div>
+                    <i class="pull-right" ng-click="paneldetails23me = !paneldetails23me">More &nbsp; <span  ng-class="{'fa fa-chevron-down': paneldetails23me, 'fa fa-chevron-right': !paneldetails23me}"></span></i>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default" ng-show="paneldetails23me">
+                <md-table-container>
+                    <table md-table  class="table tableforprofile table-bordered" >
+                        <tbody md-body>
+                            <tr md-row style="border:none">
+                                <td md-cell class="col-sm-3  " >Website</td>
+                                <td md-cell class="col-sm-9  ">https://www.facebook.com/</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3 ">URL Access Given To</td>
+                                <td md-cell class="col-sm-9  ">facebook.com</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3">The App has Access To</td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/userprofile.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Public profile</span><br />Neyma jahan,profile picure 42+years old, male and otherpublic info </span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/friendlist.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                      <span class=""><span class="text-bolder text-uppercase">Friends List</span><br />Gregory Frost,Anna Taylor  and 330others.</span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/timeline.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Timeline Posts</span><br />Your public and private posts including photos and videos and infoabout places</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/icons/location.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Locations</span><br />Updates regarding locations and check-ins</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </md-table-container>
+
+              </div>
+            </div>
+            <div class="clearfix">
+              <div class="panel panel-default mb-0">
+                <div class="panel-body clearfix">
+                  <div class="col-sm-2">
+                    <img ng-src="/images/appleHealth.png" class="md-card-image" alt="Washed Out" style="width:60px">
+                    <span style=" margin-left: 5px;">Apple Health</span>
+                  </div>
+                  <div class="col-sm-6">
+                    <p>Acces to Location:public Profile(Reqired) Friend's List,Timeline Posts,Status Update</p>
+                  </div>
+                  <div>
+                    <div class="col-sm-3" ng-show="detailplusApple" >
+                      <button class="btn btn-success btn-sm">Verify</button><button style="background:#30A88C" class="btn btn-success btn-sm "> <i class="fa fa-check-circle"></i></button>
+                      <button class="btn btn-inverse text-white btn-sm">Delete</button><button style="background:#6D6D6D" class="btn btn-primary btn-sm" > <i class="fa fa-trash"></i></button>
+                    </div>
+                    <div class="col-sm-2" ng-hide="hideconnectApple">
+                      <button class="btn btn-primary btn-sm">Connect</button><button style="background:#433EA6" class="btn btn-primary btn-sm" ng-click="detailplusApple = true; hideconnectApple = true"> <i class="fa fa-plus"></i></button>
+                    </div>
+                    <i class="pull-right" ng-click="paneldetailsApple = !paneldetailsApple">More &nbsp; <span  ng-class="{'fa fa-chevron-down': paneldetailsApple, 'fa fa-chevron-right': !paneldetailsApple}"></span></i>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default" ng-show="paneldetailsApple">
+                <md-table-container>
+                    <table md-table  class="table tableforprofile table-bordered" >
+                        <tbody md-body>
+                            <tr md-row style="border:none">
+                                <td md-cell class="col-sm-3  " >Website</td>
+                                <td md-cell class="col-sm-9  ">https://www.facebook.com/</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3 ">URL Access Given To</td>
+                                <td md-cell class="col-sm-9  ">facebook.com</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3">The App has Access To</td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/userprofile.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Public profile</span><br />Neyma jahan,profile picure 42+years old, male and otherpublic info </span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/friendlist.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                      <span class=""><span class="text-bolder text-uppercase">Friends List</span><br />Gregory Frost,Anna Taylor  and 330others.</span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/timeline.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Timeline Posts</span><br />Your public and private posts including photos and videos and infoabout places</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/icons/location.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Locations</span><br />Updates regarding locations and check-ins</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </md-table-container>
+
+              </div>
+            </div>
+            <div class="clearfix">
+              <div class="panel panel-default mb-0">
+                <div class="panel-body clearfix">
+                  <div class="col-sm-2">
+                    <img ng-src="/images/twitter.png" class="md-card-image" alt="Washed Out" style="width:60px">
+                    <span style=" margin-left: 15px;">Twitter</span>
+                  </div>
+                  <div class="col-sm-6">
+                    <p>Acces to Location:public Profile(Reqired) Friend's List,Timeline Posts,Status Update</p>
+                  </div>
+                  <div>
+                    <div class="col-sm-3" ng-show="detailplusTwitter" >
+                      <button class="btn btn-success btn-sm">Verify</button><button style="background:#30A88C" class="btn btn-success btn-sm "> <i class="fa fa-check-circle"></i></button>
+                      <button class="btn btn-inverse text-white btn-sm">Delete</button><button style="background:#6D6D6D" class="btn btn-primary btn-sm" > <i class="fa fa-trash"></i></button>
+                    </div>
+                    <div class="col-sm-2" ng-hide="hideconnectTwitter">
+                      <button class="btn btn-primary btn-sm">Connect</button><button style="background:#433EA6" class="btn btn-primary btn-sm" ng-click="detailplusTwitter = true; hideconnectTwitter = true"> <i class="fa fa-plus"></i></button>
+                    </div>
+                    <i class="pull-right" ng-click="paneldetailsTwitter = !paneldetailsTwitter">More &nbsp; <span  ng-class="{'fa fa-chevron-down': paneldetailsTwitter, 'fa fa-chevron-right': !paneldetailsTwitter}"></span></i>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default" ng-show="paneldetailsTwitter">
+                <md-table-container>
+                    <table md-table  class="table tableforprofile table-bordered" >
+                        <tbody md-body>
+                            <tr md-row style="border:none">
+                                <td md-cell class="col-sm-3  " >Website</td>
+                                <td md-cell class="col-sm-9  ">https://www.facebook.com/</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3 ">URL Access Given To</td>
+                                <td md-cell class="col-sm-9  ">facebook.com</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3">The App has Access To</td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/userprofile.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Public profile</span><br />Neyma jahan,profile picure 42+years old, male and otherpublic info </span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/friendlist.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                      <span class=""><span class="text-bolder text-uppercase">Friends List</span><br />Gregory Frost,Anna Taylor  and 330others.</span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/timeline.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Timeline Posts</span><br />Your public and private posts including photos and videos and infoabout places</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/icons/location.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Locations</span><br />Updates regarding locations and check-ins</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </md-table-container>
+
+              </div>
+            </div>
+
+            <div class="clearfix">
+              <div class="panel panel-default mb-0">
+                <div class="panel-body clearfix">
+                  <div class="col-sm-2">
+                    <img ng-src="/images/onedrop-app.png" class="md-card-image" alt="Washed Out" style="width:60px">
+                    <span style=" margin-left: 15px;">One Drop</span>
+                  </div>
+                  <div class="col-sm-6">
+                    <p>Acces to Location:public Profile(Reqired) Friend's List,Timeline Posts,Status Update</p>
+                  </div>
+                  <div>
+                    <div class="col-sm-3" ng-show="detailplusOneDrop" >
+                      <button class="btn btn-success btn-sm">Verify</button><button style="background:#30A88C" class="btn btn-success btn-sm "> <i class="fa fa-check-circle"></i></button>
+                      <button class="btn btn-inverse text-white btn-sm">Delete</button><button style="background:#6D6D6D" class="btn btn-primary btn-sm" > <i class="fa fa-trash"></i></button>
+                    </div>
+                    <div class="col-sm-2" ng-hide="hideconnectOneDrop">
+                      <button class="btn btn-primary btn-sm">Connect</button><button style="background:#433EA6" class="btn btn-primary btn-sm" ng-click="detailplusOneDrop = true; hideconnectOneDrop = true"> <i class="fa fa-plus"></i></button>
+                    </div>
+                    <i class="pull-right" ng-click="paneldetailsOneDrop = !paneldetailsTwitter">More &nbsp; <span  ng-class="{'fa fa-chevron-down': paneldetailsOneDrop, 'fa fa-chevron-right': !paneldetailsOneDrop}"></span></i>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default" ng-show="paneldetailsOneDrop">
+                <md-table-container>
+                    <table md-table  class="table tableforprofile table-bordered" >
+                        <tbody md-body>
+                            <tr md-row style="border:none">
+                                <td md-cell class="col-sm-3  " >Website</td>
+                                <td md-cell class="col-sm-9  ">https://www.facebook.com/</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3 ">URL Access Given To</td>
+                                <td md-cell class="col-sm-9  ">facebook.com</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3">The App has Access To</td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/userprofile.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Public profile</span><br />Neyma jahan,profile picure 42+years old, male and otherpublic info </span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/friendlist.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                      <span class=""><span class="text-bolder text-uppercase">Friends List</span><br />Gregory Frost,Anna Taylor  and 330others.</span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/timeline.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Timeline Posts</span><br />Your public and private posts including photos and videos and infoabout places</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/icons/location.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Locations</span><br />Updates regarding locations and check-ins</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </md-table-container>
+
+              </div>
+            </div>
+            <div class="clearfix">
+              <div class="panel panel-default mb-0">
+                <div class="panel-body clearfix">
+                  <div class="col-sm-2">
+                    <img ng-src="/images/linkedin-app.png" class="md-card-image" alt="Washed Out" style="width:60px">
+                    <span style=" margin-left: 15px;">Linked In</span>
+                  </div>
+                  <div class="col-sm-6">
+                    <p>Acces to Location:public Profile(Reqired) Friend's List,Timeline Posts,Status Update</p>
+                  </div>
+                  <div>
+                    <div class="col-sm-3" ng-show="detailplusLinkedin" >
+                      <button class="btn btn-success btn-sm">Verify</button><button style="background:#30A88C" class="btn btn-success btn-sm "> <i class="fa fa-check-circle"></i></button>
+                      <button class="btn btn-inverse text-white btn-sm">Delete</button><button style="background:#6D6D6D" class="btn btn-primary btn-sm" > <i class="fa fa-trash"></i></button>
+                    </div>
+                    <div class="col-sm-2" ng-hide="hideconnectLinkedin">
+                      <button class="btn btn-primary btn-sm">Connect</button><button style="background:#433EA6" class="btn btn-primary btn-sm" ng-click="detailplusLinkedin = true; hideconnectLinkedin = true"> <i class="fa fa-plus"></i></button>
+                    </div>
+                    <i class="pull-right" ng-click="paneldetailsLinkedin = !paneldetailsTwitter">More &nbsp; <span  ng-class="{'fa fa-chevron-down': paneldetailsLinkedin, 'fa fa-chevron-right': !paneldetailsLinkedin}"></span></i>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default" ng-show="paneldetailsLinkedin">
+                <md-table-container>
+                    <table md-table  class="table tableforprofile table-bordered" >
+                        <tbody md-body>
+                            <tr md-row style="border:none">
+                                <td md-cell class="col-sm-3  " >Website</td>
+                                <td md-cell class="col-sm-9  ">https://www.facebook.com/</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3 ">URL Access Given To</td>
+                                <td md-cell class="col-sm-9  ">facebook.com</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3">The App has Access To</td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/userprofile.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Public profile</span><br />Neyma jahan,profile picure 42+years old, male and otherpublic info </span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/friendlist.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                      <span class=""><span class="text-bolder text-uppercase">Friends List</span><br />Gregory Frost,Anna Taylor  and 330others.</span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/timeline.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Timeline Posts</span><br />Your public and private posts including photos and videos and infoabout places</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/icons/location.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Locations</span><br />Updates regarding locations and check-ins</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </md-table-container>
+
+              </div>
+            </div>
+            <div class="clearfix">
+              <div class="panel panel-default mb-0">
+                <div class="panel-body clearfix">
+                  <div class="col-sm-2">
+                    <img ng-src="/images/pintrest.png" class="md-card-image" alt="Washed Out" style="width:60px">
+                    <span style=" margin-left: 15px;">Pintrest</span>
+                  </div>
+                  <div class="col-sm-6">
+                    <p>Acces to Location:public Profile(Reqired) Friend's List,Timeline Posts,Status Update</p>
+                  </div>
+                  <div>
+                    <div class="col-sm-3" ng-show="detailplusPintrest" >
+                      <button class="btn btn-success btn-sm">Verify</button><button style="background:#30A88C" class="btn btn-success btn-sm "> <i class="fa fa-check-circle"></i></button>
+                      <button class="btn btn-inverse text-white btn-sm">Delete</button><button style="background:#6D6D6D" class="btn btn-primary btn-sm" > <i class="fa fa-trash"></i></button>
+                    </div>
+                    <div class="col-sm-2" ng-hide="hideconnectPintrest">
+                      <button class="btn btn-primary btn-sm">Connect</button><button style="background:#433EA6" class="btn btn-primary btn-sm" ng-click="detailplusPintrest = true; hideconnectPintrest = true"> <i class="fa fa-plus"></i></button>
+                    </div>
+                    <i class="pull-right" ng-click="paneldetailsPintrest = !paneldetailsTwitter">More &nbsp; <span  ng-class="{'fa fa-chevron-down': paneldetailsPintrest, 'fa fa-chevron-right': !paneldetailsPintrest}"></span></i>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default" ng-show="paneldetailsPintrest">
+                <md-table-container>
+                    <table md-table  class="table tableforprofile table-bordered" >
+                        <tbody md-body>
+                            <tr md-row style="border:none">
+                                <td md-cell class="col-sm-3  " >Website</td>
+                                <td md-cell class="col-sm-9  ">https://www.facebook.com/</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3 ">URL Access Given To</td>
+                                <td md-cell class="col-sm-9  ">facebook.com</td>
+                                  </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3">The App has Access To</td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/userprofile.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Public profile</span><br />Neyma jahan,profile picure 42+years old, male and otherpublic info </span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                  <div style="float:left">
+                                    <img src="/images/friendlist.png" class="md-card-image" alt="">
+                                  </div>
+                                  <div style="padding-left: 50px">
+                                      <span class=""><span class="text-bolder text-uppercase">Friends List</span><br />Gregory Frost,Anna Taylor  and 330others.</span>
+                                  </div>
+                                </td>
+                                  <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/timeline.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Timeline Posts</span><br />Your public and private posts including photos and videos and infoabout places</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell class="col-sm-3"></td>
+                                  <td md-cell  class="col-sm-6" style="border-bottom:1px solid #C5D0DE !important">
+                                    <div style="float:left">
+                                      <img src="/images/icons/location.png" class="md-card-image" alt="">
+                                    </div>
+                                    <div style="padding-left: 50px">
+                                        <span class=""><span class="text-bolder text-uppercase">Locations</span><br />Updates regarding locations and check-ins</span>
+                                    </div>
+                                 </td>
+                                   <td md-cell  class="col-sm-3">    <md-switch  aria-label="Switch 1" class="md-primary md-block"></md-switch></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </md-table-container>
+
+              </div>
+            </div>
+
+
+            <!-- <div class="col-sm-2">
+        <uib-accordion close-others="oneAtATime">
+
+
+
+
+
+    <div uib-accordion-group class="panel-danger" heading="More">
+      <p>Please, to delete your account, click the button below</p>
+      <button class="btn btn-danger">Delete</button>
+    </div>
+    <div uib-accordion-group class="panel-default" is-open="status.open">
+        This is just some content to illustrate fancy headings.
+    </div>
+  </uib-accordion>
+      </div> -->
+
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+    <div flex="100" flex-md="50" flex-gt-md="30">
+      <md-card style="">
+        <img ng-src="/images/face-profile.png" class="md-card-image" alt="Washed Out">
+        <div style="position:relative">
+          <div class="profiletxt">
+            <h3> Neyma Jahan</h3>
+            <h4> Chaing mai, Thailand</h4>
+          </div>
+        </div>
+
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Personal identity</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <h5 class="text-uppercase text-grey-color">Birthday</h5>
+              <h4 class="text-primary">20.04.1985</h4>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+              <h5 class="text-uppercase text-grey-color">Height</h5>
+              <h4 class="text-primary">186 cm</h4>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+              <h5 class="text-uppercase text-grey-color">Weight</h5>
+              <h4 class="text-primary">86kg</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <h5 class="text-uppercase text-grey-color">Marital status</h5>
+              <h4 class="text-primary">N/A</h4>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <h5 class="text-uppercase text-grey-color">Gender</h5>
+              <h4 class="text-primary">Male</h4>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <h5 class="text-uppercase text-grey-color">Occupation</h5>
+              <h4 class="text-primary">CEO</h4>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <h5 class="text-uppercase text-grey-color">Income</h5>
+              <h4 class="text-primary">yes</h4>
+            </div>
+
+          </div>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="start center">
+          <button class="btn btn-primary btn-lg"> View All Data &nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></button>
+        </md-card-actions>
+      </md-card>
+      <md-card style="">
+
+
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Activity Log</span>
+
+
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <div class="timeline">
+            <div class=" right">
+              <div class="content">
+                <p><b>Neyma Jahan</b> has activated Strava Uapp.</p>
+
+              </div>
+            </div>
+            <div class=" right">
+              <div class="content">
+                <p><b>Neyma Jahan</b> has activated 23 & me Uapp.</p>
+
+              </div>
+            </div>
+            <div class=" right">
+              <div class="content">
+                <p><b>Neyma Jahan</b> has subscribed to Blood Gluclose Monitoring program.</p>
+
+              </div>
+            </div>
+            <div class=" right">
+              <div class="content">
+                <p><b>Neyma Jahan</b> has activated One Drop Uapp.</p>
+
+              </div>
+            </div>
+
+          </div>
+          <!-- <timeline>
+         <timeline-event ng-repeat="event in events" side="right">
+           <timeline-badge class="{{event.badgeClass}}">
+             <i class="glyphicon {{event.badgeIconClass}}"></i>
+           </timeline-badge>
+           <timeline-panel class="{{event.badgeClass}}">
+             <timeline-heading>
+               <h4>{{event.title}}</h4>
+             </timeline-heading>
+             <p>{{event.content}}</p>
+           </timeline-panel>
+         </timeline-event>
+       </timeline> -->
+        </md-card-content>
+        <!-- <md-card-actions layout="row" layout-align="start center">
+     <button class="btn btn-primary btn-lg"> View All Data &nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></button>
+    </md-card-actions> -->
+      </md-card>
+    </div>
+    <!-- <div flex class="today-stats">
+        <h3 class="md-caption" layout-margin>Today's Stats</h3>
+
+        <div layout-gt-sm="row">
+            <div flex-gt-sm="33" class="stats-wrapper">
+                <div class="stats">
+                    <div class="val">3.1K</div>
+                    <div class="md-caption text-uppercase">Page Views</div>
+                </div>
+                <span class="chart-trends" sparkline type="line" width="8em" height="2em" fill-color="transparent" line-color="#388E3C">3,4,2,3,4,1,4,2</span>
+            </div>
+
+            <div flex-gt-sm="33" class="stats-wrapper">
+                <div class="stats">
+                    <div class="val">288</div>
+                    <div class="md-caption text-uppercase">Downloads</div>
+                </div>
+                <span class="chart-trends" sparkline type="line" width="8em" height="2em" fill-color="transparent" line-color="#388E3C">3,4,2,3,4,4,6,2</span>
+            </div>
+
+            <div flex-gt-sm="33" class="stats-wrapper">
+                <div class="stats">
+                    <div class="val">$189</div>
+                    <div class="md-caption text-uppercase">Earnings</div>
+                </div>
+                <span class="chart-trends" sparkline type="line" width="8em" height="2em" fill-color="transparent" line-color="#388E3C">3,4,2,3,4,5,4,5</span>
+            </div>
+        </div>
+    </div>
+
+    <div layout-gt-sm="row">
+        <md-card flex-gt-sm="40">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-subhead text-uppercase text-bold">Browser Sessions</span>
+
+                </md-card-title-text>
+            </md-card-title>
+
+            <md-card-content style="text-align: center;">
+            	<c3-chart id="c3chartbrowsershare" config="browserconfig"></c3-chart>
+            </md-card-content>
+        </md-card>
+
+        <md-card flex-gt-sm="60">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-subhead text-uppercase text-bold">Weekly Growth</span>
+
+                </md-card-title-text>
+            </md-card-title>
+
+            <md-card-content>
+                <c3-chart id="c3chartweeklygrowth" config="weeklygrowthconfig"></c3-chart>
+            </md-card-content>
+        </md-card>
+    </div>
+
+    <div layout-gt-sm="row">
+
+
+        <md-card flex-gt-sm="60">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-subhead text-uppercase text-bold">Visitors Age</span>
+                </md-card-title-text>
+            </md-card-title>
+
+            <md-card-content>
+                <c3-chart id="c3visitorsage" config="visitorsageconfig"></c3-chart>
+
+            </md-card-content>
+
+        </md-card>
+
+        <md-card flex-gt-sm="40">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-subhead text-uppercase text-bold">Activities</span>
+
+                </md-card-title-text>
+            </md-card-title>
+
+            <md-card-content class="dashboard-activities">
+                <ul class="list-unstyled">
+                    <li class="primary">
+                        <span class="point"></span>
+                        <span class="time md-caption">2 mins ago</span>
+                        <p>Jonathan attended a meeting.</p>
+                    </li>
+                    <li class="success">
+                        <span class="point"></span>
+                        <span class="time md-caption">1 hour ago</span>
+                        <p>Designed the wordpress theme</p>
+                    </li>
+                    <li class="warning">
+                        <span class="point"></span>
+                        <span class="time md-caption">4:30 p.m</span>
+                        <p>Lily created her account.</p>
+                    </li>
+                    <li class="info">
+                        <span class="point"></span>
+                        <span class="time md-caption">2 days ago</span>
+                        <p>Your domain will expired in 9 days.</p>
+                    </li>
+                    <li class="danger">
+                        <span class="point"></span>
+                        <span class="time md-caption">1 week ago</span>
+                        <p>Lorem ipsum dolar sit amet consectator.</p>
+                    </li>
+                </ul>
+
+            </md-card-content>
+
+        </md-card>
+
+    </div>
+
+    <div layout-gt-sm="row">
+        <md-card flex-gt-sm="100">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-subhead text-uppercase text-bold">Project Stats</span>
+
+                </md-card-title-text>
+            </md-card-title>
+
+            <md-card-content>
+                <md-table-container>
+                    <table md-table>
+                        <thead md-head>
+                            <tr md-row>
+                                <th md-column class="text-uppercase">Id</th>
+                                <th md-column class="text-uppercase">Project</th>
+                                <th md-column class="text-uppercase">Fees</th>
+                                <th md-column class="text-uppercase">Status</th>
+                                <th md-column class="text-uppercase">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody md-body>
+                            <tr md-row>
+                                <td md-cell>220</td>
+                                <td md-cell>Convert to Sass</td>
+                                <td md-cell>$340</td>
+                                <td md-cell><md-progress-circular md-mode="determinate" value="60" class="md-warn" md-diameter="25"></md-progress-circular></td>
+                                <td md-cell>10<sup>th</sup> Dec 2016</td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell>101</td>
+                                <td md-cell>Designing wordpress theme</td>
+                                <td md-cell>$1340</td>
+                                <td md-cell><md-progress-circular md-mode="determinate" class="md-accent" value="80"  md-diameter="25"></md-progress-circular></td>
+                                <td md-cell>20<sup>th</sup> Dec 2016</td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell>310</td>
+                                <td md-cell>Adding animations to template</td>
+                                <td md-cell>$120</td>
+                                <td md-cell><md-progress-circular md-mode="determinate" value="90" md-diameter="25"></md-progress-circular></td>
+                                <td md-cell>2<sup>nd</sup> Dec 2016</td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell>405</td>
+                                <td md-cell>Lorem ipsum dolar sit amet</td>
+                                <td md-cell>$310</td>
+                                <td md-cell><md-progress-circular md-mode="determinate" value="50" class="md-warn" md-diameter="25"></md-progress-circular></td>
+                                <td md-cell>29<sup>th</sup> Nov 2016</td>
+                            </tr>
+                            <tr md-row>
+                                <td md-cell>445</td>
+                                <td md-cell>Building admin template</td>
+                                <td md-cell>$890</td>
+                                <td md-cell><md-progress-circular md-mode="determinate" value="30" class="md-warn md-hue-2" md-diameter="30"></md-progress-circular></td>
+                                <td md-cell>1<sup>st</sup> Jan 2017</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </md-table-container>
+            </md-card-content>
+
+        </md-card>
+
+    </div> -->
+
+
+
+  </div>

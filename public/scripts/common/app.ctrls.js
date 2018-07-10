@@ -170,6 +170,12 @@
 
     .controller('DashboardCtrl', ['$scope', function($scope) {
         // === weekly growth
+         $scope.oneAtATime = true;
+         $scope.status = {
+  isCustomHeaderOpen: false,
+  isFirstOpen: true,
+  isFirstDisabled: false
+};
         $scope.barconfig = {
     			data: {
     				columns: [

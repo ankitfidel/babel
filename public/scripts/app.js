@@ -86,7 +86,7 @@
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
         var routes = [
-            'dashboard','dashboard-2', 'email/inbox', 'calendar',
+            'dashboard','dashboard-2','profile' ,'email/inbox', 'calendar',
             'ui/buttons', 'ui/typography', 'ui/cards', 'ui/grids', 'ui/icons', 'ui/tabs', 'ui/modals', 'ui/progress', 'ui/extras',
             'forms/elements', 'forms/validation', 'forms/uploader',
             'tables',
@@ -205,6 +205,33 @@
 				}]
             }
         })
+        $routeProvider.when('/profile', {
+            templateUrl: 'views/profile.html',
+            resolve: {
+                deps: ["$ocLazyLoad", '$rootScope', '$timeout', function(a, $rootScope, $timeout) {
+          return a.load(['scripts/lazyload/jquery.sparkline.min.js'])
+          .then(function() {
+            return a.load({
+              name: "app.directives",
+              files: ["scripts/lazyload/sparkline.directive.js"]
+            })
+          })
+                    .then(function() {
+                        return a.load(["scripts/lazyload/d3.min.js", "scripts/lazyload/c3.min.js", "styles/lazyload/c3.min.css"])
+                    })
+                    .then(function() {
+                        return a.load('angular-c3');
+                    })
+                    .then(function() {
+            $timeout(function() {
+              $rootScope.$broadcast("c3.resize");
+            }, 100);
+          })
+
+        }]
+            }
+        })
+
 
 
         // charts - c3

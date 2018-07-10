@@ -1,31 +1,34 @@
 <div class="page page-dashboard" layout-gt-sm="column" ng-controller="DashboardCtrl1">
 
-  <div layout="row" style="margin-bottom: 120px;">
+  <div layout="row" layout-wrap style="margin-bottom: 120px;">
     <div flex="100" flex-md="50" flex-gt-md="50">
       <div class="mt-20 mb-20 ml-20">
         <img src="/images/BABEL.png">
       </div>
       <div>
         <h4 class="text-primary mt-30 mb-20 ml-20">One Drop Diabetes Management </h4>
-        <div class="col-sm-2">
+        <div class="col-lg-2 col-sm-12">
           <img src="/images/onedrop-app.png" /><br />
           <p class="text-primary text-bolder mt-20">
             User ratings
           </p>
-          <fieldset class="rating">
-            <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-            <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-            <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-            <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-            <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-        </fieldset>
+          <div class="clearfix">
+            <fieldset class="rating">
+              <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+              <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+              <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+              <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+              <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+              <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+              <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+              <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+              <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+              <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
+          </div>
+
         </div>
-        <div class="col-sm-10">
+        <div class="col-lg-10 col-sm-12">
         <p>
           One Drop Mobile is a free award-winning app loaded with features to help users manage their diabetes data. Uapp includes the features like: Apple Health® Integration, Fully-Featured Apple WatchOS 3 App,
           Scheduled Medication Reminders, Automatic Insulin Pump Data, Automatic Carb Counting, Historical Data & Stats Views, Multi-Language & Multi-Region Support and Great Community. Uapp integrates with many currently available programs
@@ -34,13 +37,13 @@
       </div>
     </div>
     <div flex="100" flex-md="50" flex-gt-md="50">
-<div>
+<div class="clearfix">
 <h3 class="text-grey-color text-bolder">UND Earnings</h3>
-  <div class="col-lg-4" style="border-right:1px solid #ccc">
+  <div class="col-lg-6 col-sm-6" style="border-right:1px solid #ccc">
     <h2 class="text-primary">+19.25 (8.50%)</h2>
     <span class="text-grey-color">Change in Earnings</span>
   </div>
-  <div class="col-lg-4 ml-20">
+  <div class="col-lg-6 col-sm-6">
     <h3 class="text-grey-color text-bolder"></h3>
     <h2 class="text-primary">225.67 UND</h2>
     <span class="text-grey-color">Previous month</span>
@@ -52,8 +55,8 @@
     </div>
 
   </div>
-  <div layout="row" layout-fill layout-align="center stretch">
-    <div class="col-lg-3">
+  <div layout="row" layout-wrap layout-align="center stretch">
+    <div class="col-lg-3 col-sm-12 col-xs-12">
       <h4 class="text-bolder text-grey-color">Data Available</h4>
       <table class="table table-striped">
         <thead>
@@ -174,7 +177,7 @@
       </div>
 
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-3 col-sm-12 col-xs-12">
        <md-content style="">
       <md-tabs class="customdynamic" style="height:500px !important" md-border-bottom>
      <md-tab label="New Users">
